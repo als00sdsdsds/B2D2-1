@@ -21,6 +21,7 @@ class _MypageState extends State<Mypage> {
 
   TextEditingController _nameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordCheckController = TextEditingController();
   final storage = new FlutterSecureStorage();
   String? memberId;
   String? memberName;
@@ -77,6 +78,9 @@ class _MypageState extends State<Mypage> {
   _submitForm() async {
     late String name;
     try {
+      if(_passwordCheckController.text == _passwordController.text) {
+        
+      }
       if (_nameController.text == null || _nameController.text.isEmpty) {
         name = memberName!;
       } else {
@@ -317,6 +321,28 @@ class _MypageState extends State<Mypage> {
                               ),
                             ),
                           ),
+                          passwordUpdate
+                        ? Container()
+                        : Container(
+                            margin: EdgeInsets.only(left: 10.w, right: 10.w),
+                            child: TextFormField(
+                              controller: _passwordCheckController,
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                labelText: '비밀번호확인',
+                                labelStyle: TextStyle(color: Colors.grey),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.grey),
+                                ),
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(margin: EdgeInsets.only(left: 10.w),child: Text('비밀번호가 일치하지 않습니다.', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red, fontSize: 10.sp),)),
                     nameUpdate && groupUpdate && passwordUpdate
                         ? Container()
                         : Container(
