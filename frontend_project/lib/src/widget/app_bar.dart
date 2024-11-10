@@ -17,7 +17,7 @@ class App_bar extends StatefulWidget implements PreferredSizeWidget {
 
 class _App_barState extends State<App_bar> {
   final userController = Get.put(UserController());
-  bool isLogin = false;
+  late bool isLogin = false;
 
   @override
   void initState() {
