@@ -22,7 +22,7 @@ class _App_barState extends State<App_bar> {
   @override
   void initState() {
     super.initState();
-    // 로그인 여부 확인하기
+    // 로그인 여부 확인
     loginCheck();
   }
 
