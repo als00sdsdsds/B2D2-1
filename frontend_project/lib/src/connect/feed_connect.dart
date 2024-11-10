@@ -1,4 +1,4 @@
-import 'package:frontend_project/shared/global.dart';
+import 'package:frontend_project/src/shared/global.dart';
 import 'package:get/get_connect/connect.dart';
 import 'package:get_storage/get_storage.dart';
 

@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:frontend_project/shared/global.dart';
+import 'package:frontend_project/src/shared/global.dart';
 import 'package:get_storage/get_storage.dart';
 
 final GetStorage _storage = GetStorage();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:frontend_project/shared/global.dart';
+import 'package:frontend_project/src/shared/global.dart';
 
 class Imageview extends StatefulWidget {
   final List imageAssets;
