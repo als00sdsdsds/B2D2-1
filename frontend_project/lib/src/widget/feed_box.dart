@@ -151,7 +151,7 @@ class _FeedBoxState extends State<FeedBox> {
                                 IconButton(
                                   onPressed: () => Navigator.of(context).push(
                                       MaterialPageRoute(
-                                          builder: (context) => Feedmodify())),
+                                          builder: (context) => Feedmodify(userInformation: {'boardNum': item['boardNum'], 'boardDate': item['boardDate'], 'boardContent':item['boardContent'],'boardWriter':item['boardWriter'], 'boardWriterGroup': item['boardWriterGroup'], 'images': item['images']}))),
                                   icon: Image.asset(
                                     'assets/modify.png',
                                     width: 20.h,

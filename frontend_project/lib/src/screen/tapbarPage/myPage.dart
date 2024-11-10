@@ -131,6 +131,21 @@ class _MypageState extends State<Mypage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(height: 10.h),
+                    Container(
+                      margin: EdgeInsets.only(left: 10.w),
+                      child: Text(
+                        '아이디',
+                        style: TextStyle(fontSize: 17.sp),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 10.w),
+                      child: Text(
+                        memberId == '' ? '오류' : memberId!,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
                     SizedBox(height: 15.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -248,21 +263,6 @@ class _MypageState extends State<Mypage> {
                                   });
                                 }),
                           ),
-                    SizedBox(height: 10.h),
-                    Container(
-                      margin: EdgeInsets.only(left: 10.w),
-                      child: Text(
-                        '아이디',
-                        style: TextStyle(fontSize: 17.sp),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 10.w),
-                      child: Text(
-                        memberId == '' ? '오류' : memberId!,
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
                     SizedBox(height: 10.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
